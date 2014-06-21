@@ -1,6 +1,8 @@
 import time, sys
 
-data = enumerate(map(int, list(open('sudoku.in', 'r').read()[:-1])))
+with open('sudoku.in', 'r') as dump:
+	data = enumerate(map(int, list(dump.read()[:-1])))
+
 space = set(xrange(1, 10))
 
 class Cell:
